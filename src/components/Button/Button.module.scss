@@ -1,0 +1,103 @@
+.wrapper {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    line-height: 22px;
+    min-width: 100px;
+    min-height: 36px;
+    color: var(--black);
+    background-color: var(--white);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    + .wrapper {
+        margin-left: 16px;
+    }
+}
+
+//Disable button
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.icon {
+    padding: 0 3px;
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+//Button types
+.rounded {
+    font-size: 14px;
+    color: rgba(22, 24, 35, 0.75);
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: var(--white);
+    }
+
+    &:active {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.primary {
+    color: var(--white);
+    background-color: var(--primary);
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+
+    &:active {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)), #fe2c55;
+    }
+}
+
+.outline {
+    color: var(--primary);
+    border-color: currentColor;
+
+    &:hover {
+        border-color: currentColor;
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+
+    &:active {
+        background-color: rgba(254, 44, 85, 0.16);
+    }
+}
+
+.upload {
+    padding: 0 16px;
+    border-radius: 2px;
+}
+
+//Button size
+.small {
+    min-width: 88px;
+    min-height: 28px;
+    padding: 0 10px;
+}
+
+.large {
+    min-width: 168px;
+    min-height: 48px;
+    font-size: 18px;
+    line-height: 25px;
+    // width: 100%;
+}

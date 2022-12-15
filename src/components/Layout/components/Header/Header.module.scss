@@ -22,10 +22,18 @@
 
 .logo {
     padding-top: 7px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.search,
+.search-result {
+    width: 361px;
 }
 
 .search {
-    width: 361px;
     height: 46px;
     display: flex;
     align-items: center;
@@ -56,6 +64,15 @@
     &:focus-within {
         border-color: rgba(22, 24, 35, 0.2);
     }
+}
+
+.search-title {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
 }
 
 .clear,

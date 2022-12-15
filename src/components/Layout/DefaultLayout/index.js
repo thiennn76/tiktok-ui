@@ -3,9 +3,9 @@ import Header from '~/components/Layout/components/Header';
 import Sidebar from './Sidebar';
 import styles from './Default.module.scss';
 
-function DefaultLayout({ children }) {
-    const cx = classNames.bind(styles);
+const cx = classNames.bind(styles);
 
+function DefaultLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Header />
