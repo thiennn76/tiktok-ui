@@ -1,4 +1,7 @@
 .wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -29,12 +32,15 @@
 }
 
 .icon {
-    padding: 0 3px;
+    display: inline-block;
+    text-align: center;
+    width: 24px;
+    font-size: 17px;
 }
 
 .icon + .title,
 .title + .icon {
-    margin-left: 8px;
+    margin-left: 6px;
 }
 
 //Button types
@@ -83,7 +89,8 @@
 }
 
 .upload {
-    padding: 0 16px;
+    font-weight: 600;
+    padding: 0 15px;
     border-radius: 2px;
 }
 
