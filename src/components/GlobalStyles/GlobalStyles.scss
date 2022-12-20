@@ -12,14 +12,25 @@
     --default-layout-width: 1150px;
 }
 
-* {
+*,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
     font-style: 62.5%;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
 }
 
 body {
