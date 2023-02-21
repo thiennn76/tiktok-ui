@@ -10,6 +10,11 @@
     padding-bottom: 8px;
 }
 
+.sub-menu {
+    overflow-y: auto;
+    max-height: 582px;
+}
+
 // Menu items
 .menu-item {
     font-weight: 600;
@@ -26,6 +31,12 @@
     &:hover {
         background: rgba(22, 24, 35, 0.03);
     }
+}
+
+.sub-items {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 // Header
