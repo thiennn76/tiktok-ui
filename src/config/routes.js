@@ -9,6 +9,7 @@ const routes = {
     studio: '/studio',
     setting: '/setting',
     logout: '/logout',
+    live: '/live',
 };
 
 export default routes;

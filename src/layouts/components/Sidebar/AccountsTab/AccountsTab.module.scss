@@ -1,0 +1,83 @@
+.wrapper {
+    position: relative;
+    padding: 16px 0;
+    margin-right: 8px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 8px;
+        top: 0;
+        height: 1px;
+        background-color: #1618231f;
+    }
+}
+
+.label {
+    padding-right: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #161823bf;
+}
+
+.account-item {
+    display: flex;
+    padding: 8px;
+    margin-left: -8px;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 4px;
+    transition: background-color 200ms ease-in-out 0s;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &:active {
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.username {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.check {
+    font-size: 14px;
+    color: rgb(32, 213, 236);
+    margin-left: 4px;
+}
+
+.name {
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 400;
+}
+
+.more-btn {
+    margin-top: 8px;
+    color: rgb(254, 44, 85);
+    font-family: 'IBM Plex Sans', ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
