@@ -1,4 +1,8 @@
 .wrapper {
     width: 340px;
-    padding: 20px 0 26px;
+    height: 680px;
+    padding: 20px 8px 26px;
+    margin-left: -8px;
+    overflow-y: overlay;
+    overflow-x: hidden;
 }

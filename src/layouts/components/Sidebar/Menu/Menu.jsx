@@ -1,3 +1,5 @@
+import classNames from 'classnames/bind';
+import styles from './Menu.module.scss';
 import MenuItem from './MenuItem';
 import config from '~/config';
 import {
@@ -9,9 +11,11 @@ import {
     LiveSolidIcon,
 } from '~/components/Icon';
 
+const cx = classNames.bind(styles);
+
 function Menu() {
     return (
-        <nav>
+        <nav className={cx('wrapper')}>
             <MenuItem
                 title="Dành cho bạn"
                 to={config.routes.home}
