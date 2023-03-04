@@ -1,0 +1,110 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 0px;
+    position: relative;
+    max-width: 692px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 0.5px;
+        background-color: #1618231f;
+    }
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 auto;
+}
+
+.body {
+    margin-left: 12px;
+    width: 624px;
+    flex: 1 1 624px;
+}
+
+.content {
+    margin-right: 114px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.username {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.check {
+    font-size: 14px;
+    color: rgb(32, 213, 236);
+    margin-left: 4px;
+}
+
+.name {
+    font-size: 14px;
+    line-height: 28px;
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 400;
+    display: inline-block;
+}
+
+.follow-btn {
+    position: absolute;
+    right: 0;
+    top: 28px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: rgb(22, 24, 35);
+}
+
+.music {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.music-note {
+    height: 12px;
+    width: 12px;
+    margin-right: 5px;
+}
+
+.video {
+    width: 290px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.video-content {
+    margin-right: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.vjs-big-play-centered {
+    background-color: transparent;
+    :first-child {
+        border-radius: 8px;
+    }
+}

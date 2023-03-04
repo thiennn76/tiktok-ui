@@ -8,8 +8,7 @@
     display: flex;
     width: 100%;
     max-width: var(--default-layout-width);
-    height: 100vh;
-    padding-right: 24px;
+    height: calc(100vh - var(--default-layout-header-height));
     padding-left: 20px;
     margin-top: var(--default-layout-header-height);
     justify-content: space-between;
@@ -22,4 +21,9 @@
     width: 692px;
     max-width: 692px;
     padding: 24px 0;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
