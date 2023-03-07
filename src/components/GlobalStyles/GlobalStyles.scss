@@ -99,3 +99,49 @@ body {
         top: -8px;
     }
 }
+
+//custom video-react
+video,
+.video-react,
+.video-react-poster {
+    border-radius: 8px;
+}
+
+.video-react {
+    .video-react-big-play-button {
+        display: none;
+    }
+
+    .video-react-control-bar {
+        justify-content: space-between;
+        height: 6em;
+    }
+
+    .video-react-control {
+        width: 6em;
+
+        &::before {
+            font-size: 30px;
+        }
+    }
+
+    .video-react-volume-bar.video-react-slider-vertical {
+        height: 5.5em;
+        margin: 1.5em auto;
+    }
+
+    .video-react-slider-vertical .video-react-volume-level:before {
+        left: -0.4em;
+        font-size: 1.4em;
+    }
+}
+
+.video-react-menu {
+    left: 16px !important;
+    bottom: 24px !important;
+}
+
+.video-react-menu-content {
+    background-color: rgba(22, 24, 35, 0.34) !important;
+    border-radius: 32px;
+}

@@ -146,11 +146,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <Image
-                                className={cx('user-avatar')}
-                                src="https://scontent.fsgn13-2.fna.fbcdn.net/v/t1.6435-9/79530691_2746138355612727_8147857160160673792_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=7LXUCbB5A5IAX_zDCXs&_nc_ht=scontent.fsgn13-2.fna&oh=00_AfCr2Lhr0cdZTRh8rMEkjgnqt408_rdyTzZiPmYnbT78JQ&oe=63C501A6"
-                                alt="user avatar"
-                            />
+                            <Image className={cx('user-avatar')} src={images.testAvatar} alt="user avatar" />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <MoreIcon />
