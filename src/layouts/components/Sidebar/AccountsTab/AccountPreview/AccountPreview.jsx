@@ -7,6 +7,7 @@ import styles from './AccountPreview.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Button from '~/components/Button';
 import Image from '~/components/Image';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -27,17 +28,19 @@ function AccountPreview({ data }) {
     return (
         <PopperWrapper className={cx('wrapper')}>
             <div className={cx('header')}>
-                <Image className={cx('avatar')} src={data.avatar} alt={data.first_name} />
+                <Link to={`/@${data.nickname}`}>
+                    <Image className={cx('avatar')} src={data.avatar} alt={data.first_name} />
+                </Link>
                 <Button primary medium>
                     Follow
                 </Button>
             </div>
             <div className={cx('body')}>
                 <h4 className={cx('username')}>
-                    <span>{data.nickname}</span>
+                    <Link to={`/@${data.nickname}`}>{data.nickname}</Link>
                     {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCircleCheck} />}
                 </h4>
-                <p className={cx('name')}>{`${data.first_name} ${data.last_name}`}</p>
+                <Link to={`/@${data.nickname}`} className={cx('name')}>{`${data.first_name} ${data.last_name}`}</Link>
                 <div className={cx('analytics')}>
                     <strong className={cx('value')}>{reduceCount(data.followers_count)}</strong>
                     <span className={cx('label')}>Follower</span>

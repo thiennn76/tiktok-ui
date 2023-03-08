@@ -41,6 +41,9 @@
     align-items: center;
 }
 
+.info:hover > .username {
+    text-decoration: underline;
+}
 .username {
     font-size: 18px;
     line-height: 25px;
@@ -137,4 +140,18 @@
     font-size: 12px;
     line-height: 17px;
     text-align: center;
+}
+
+.share-menu {
+    width: 280px;
+    max-height: 448px;
+    overflow: hidden overlay;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
 }

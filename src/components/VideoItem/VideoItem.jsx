@@ -7,12 +7,78 @@ import { faCircleCheck, faComment, faHeart, faMusic, faShare } from '@fortawesom
 import styles from './VideoItem.module.scss';
 import Image from '~/components/Image';
 import Button from '~/components/Button';
+import Menu from '~/components/Popper/Menu';
+import {
+    CopyLinkIcon,
+    EmailIcon,
+    EmbedIcon,
+    FacebookIcon,
+    LineIcon,
+    LinkedInIcon,
+    PineterestIcon,
+    RedditIcon,
+    ShareMessageIcon,
+    TelegramIcon,
+    TwitterIcon,
+    WhatsAppIcon,
+} from '~/components/Icon';
 import Video from './Video';
 
 const cx = classNames.bind(styles);
 
 function VideoItem({ data }) {
     const user = data.user;
+
+    const shareMenu = [
+        {
+            icon: <EmbedIcon />,
+            title: 'Nhúng',
+        },
+        {
+            icon: <ShareMessageIcon />,
+            title: 'Gửi đến bạn bè',
+        },
+        {
+            icon: <FacebookIcon />,
+            title: 'Share to Facebook',
+        },
+        {
+            icon: <WhatsAppIcon />,
+            title: 'Share to WhatsApp',
+        },
+        {
+            icon: <CopyLinkIcon />,
+            title: 'Sao chép liên kết',
+        },
+        {
+            icon: <TwitterIcon />,
+            title: 'Share to Twitter',
+        },
+        {
+            icon: <LinkedInIcon />,
+            title: 'Share to LinkedIn',
+        },
+        {
+            icon: <RedditIcon />,
+            title: 'Share to Reddit',
+        },
+        {
+            icon: <TelegramIcon />,
+            title: 'Share to Telegram',
+        },
+        {
+            icon: <EmailIcon />,
+            title: 'Share to Email',
+        },
+        {
+            icon: <LineIcon />,
+            title: 'Share to Line',
+        },
+        {
+            icon: <PineterestIcon />,
+            title: 'Share to Pineterest',
+        },
+    ];
 
     const reduceCount = (count) => {
         if (count >= 10 ** 9) {
@@ -29,7 +95,9 @@ function VideoItem({ data }) {
 
     return (
         <div className={cx('wrapper')}>
-            <Image className={cx('avatar')} src={user.avatar} alt={user.first_name} />
+            <Link to={`/@${user.nickname}`}>
+                <Image className={cx('avatar')} src={user.avatar} alt={user.first_name} />
+            </Link>
             <div className={cx('body')}>
                 <div className={cx('content')}>
                     <Link to={`/@${user.nickname}`} className={cx('info')}>
@@ -61,10 +129,22 @@ function VideoItem({ data }) {
                                 <FontAwesomeIcon className={cx('icon')} icon={faComment} />
                             </button>
                             <strong className={cx('value')}>{reduceCount(data.comments_count)}</strong>
-                            <button className={cx('interact-btn')}>
-                                <FontAwesomeIcon className={cx('icon')} icon={faShare} />
-                            </button>
-                            <strong className={cx('value')}>{reduceCount(data.shares_count)}</strong>
+
+                            <Menu
+                                items={shareMenu}
+                                delay={[0, 300]}
+                                offset={[-25, 0]}
+                                placement="top-start"
+                                className={cx('share-menu')}
+                                showMore
+                            >
+                                <div className={cx('analytics')}>
+                                    <button className={cx('interact-btn')}>
+                                        <FontAwesomeIcon className={cx('icon')} icon={faShare} />
+                                    </button>
+                                    <strong className={cx('value')}>{reduceCount(data.shares_count)}</strong>
+                                </div>
+                            </Menu>
                         </div>
                     </div>
                 </div>

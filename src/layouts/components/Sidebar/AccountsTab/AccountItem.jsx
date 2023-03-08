@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
@@ -22,7 +23,7 @@ function AccountItem({ data }) {
     return (
         <div>
             <HeadlessTippy interactive delay={[800, 0]} offset={[30, 0]} placement="bottom" render={renderPreview}>
-                <div className={cx('account-item')}>
+                <Link to={`/@${data.nickname}`} className={cx('account-item')}>
                     <Image className={cx('avatar')} src={data.avatar} alt={data.first_name} />
                     <div className={cx('info')}>
                         <h4 className={cx('username')}>
@@ -31,7 +32,7 @@ function AccountItem({ data }) {
                         </h4>
                         <p className={cx('name')}>{`${data.first_name} ${data.last_name}`}</p>
                     </div>
-                </div>
+                </Link>
             </HeadlessTippy>
         </div>
     );

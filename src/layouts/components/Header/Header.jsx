@@ -144,7 +144,13 @@ function Header() {
                             </Button>
                         </>
                     )}
-                    <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
+                    <Menu
+                        items={currentUser ? userMenu : MENU_ITEMS}
+                        delay={[0, 700]}
+                        offset={[12, 12]}
+                        placement="bottom-end"
+                        onChange={handleMenuChange}
+                    >
                         {currentUser ? (
                             <Image className={cx('user-avatar')} src={images.testAvatar} alt="user avatar" />
                         ) : (
