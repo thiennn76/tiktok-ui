@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck, faComment, faHeart, faMusic, faShare } from '@fortawesome/free-solid-svg-icons';
@@ -27,6 +28,7 @@ import Video from './Video';
 const cx = classNames.bind(styles);
 
 function VideoItem({ data }) {
+    const [isLiked, setIsLiked] = useState(data.is_liked);
     const user = data.user;
 
     const shareMenu = [
@@ -121,7 +123,12 @@ function VideoItem({ data }) {
                             <Video src={data.file_url} poster={data.thumb_url} height={515} width={290} />
                         </div>
                         <div className={cx('analytics')}>
-                            <button className={cx('interact-btn')}>
+                            <button
+                                className={cx('interact-btn', isLiked && 'liked-btn')}
+                                onClick={() => {
+                                    setIsLiked(!isLiked);
+                                }}
+                            >
                                 <FontAwesomeIcon className={cx('icon')} icon={faHeart} />
                             </button>
                             <strong className={cx('value')}>{reduceCount(data.likes_count)}</strong>
