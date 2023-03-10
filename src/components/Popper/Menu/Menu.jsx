@@ -19,6 +19,7 @@ function Menu({
     delay = [],
     offset = [],
     placement = '',
+    flip = false,
     className,
     showMore = false,
     hideOnClick = false,
@@ -68,6 +69,7 @@ function Menu({
 
     return (
         <HeadlessTippy
+            popperOptions={{ modifiers: [{ name: 'flip', enabled: flip }] }}
             interactive
             delay={delay}
             offset={offset}
@@ -119,6 +121,7 @@ Menu.propTypes = {
     delay: PropTypes.array,
     offset: PropTypes.array,
     placement: PropTypes.string,
+    flip: PropTypes.bool,
     className: PropTypes.string,
     showMore: PropTypes.bool,
     hideOnClick: PropTypes.bool,

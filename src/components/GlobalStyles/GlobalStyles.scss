@@ -78,25 +78,47 @@ span {
 }
 
 // Custom tippy tooltip
-body {
-    .tippy-box {
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        background-color: rgba(84, 84, 84, 0.92);
-    }
+// Tippy theme 'header-popup'
+
+.tippy-box[data-theme~='header-popup'] {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: rgba(84, 84, 84, 0.92);
 
     .tippy-arrow {
         color: rgba(84, 84, 84, 0.92);
     }
-
     .tippy-content {
         padding: 8px;
     }
+}
 
-    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
-        top: -8px;
+.tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+    top: -8px;
+}
+
+// Tippy them 'footer-more'
+.tippy-box[data-theme~='footer-more'] {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(22, 24, 35);
+    background-color: var(--white);
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+
+    .tippy-arrow {
+        color: var(--white);
+    }
+    .tippy-content {
+        padding: 15px 16px 20px;
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(254, 44, 85);
+        }
     }
 }
 

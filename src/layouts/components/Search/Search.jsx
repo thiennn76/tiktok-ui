@@ -66,7 +66,7 @@ function Search() {
                 visible={showResult && searchResult.length > 0}
                 render={(attrs) => (
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                        <PopperWrapper limitHeight>
+                        <PopperWrapper className={cx('search-popper')}>
                             <h4 className={cx('search-title')}>Tài khoản</h4>
                             {searchResult.map((data) => (
                                 <AccountItem key={data.id} data={data} />

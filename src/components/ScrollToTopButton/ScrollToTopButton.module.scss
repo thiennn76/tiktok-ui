@@ -1,0 +1,29 @@
+.wrapper {
+    position: absolute;
+    bottom: 8px;
+    right: 24px;
+}
+
+.scroll-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    min-width: 32px;
+    line-height: 0;
+    border-radius: 50%;
+    background-color: rgb(254, 44, 85);
+    box-shadow: rgb(0 0 0 / 6%) 0px 2px 8px;
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+    }
+}
+
+.show {
+    display: inline;
+}
+
+.hide {
+    display: none;
+}

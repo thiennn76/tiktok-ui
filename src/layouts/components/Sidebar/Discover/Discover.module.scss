@@ -1,0 +1,61 @@
+.wrapper {
+    position: relative;
+    padding: 16px 0;
+    padding-right: 8px;
+    margin-left: -4px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 8px;
+        top: 0;
+        height: 0.5px;
+        background-color: #1618231f;
+    }
+}
+
+.label {
+    padding: 0 0 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #161823bf;
+}
+
+.discover-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.discover-btn {
+    display: flex;
+    margin: 0 8px 12px 0;
+    padding: 3px 10px;
+    width: fit-content;
+    max-width: 100%;
+    height: 24px;
+    border: 1px solid rgba(22, 24, 35, 0.2);
+    border-radius: 12px;
+    transition: all 200ms ease-in-out 0s;
+
+    .icon {
+        flex-shrink: 0;
+    }
+
+    .title {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-left: 6px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(22, 24, 35, 0.75);
+    }
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}

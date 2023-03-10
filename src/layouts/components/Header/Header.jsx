@@ -121,13 +121,13 @@ function Header() {
                             <Button upload leftIcon={<FontAwesomeIcon icon={faPlus} />} to={config.routes.upload}>
                                 Tải lên
                             </Button>
-                            <Tippy delay={[0, 100]} content="Tin nhắn" placement="bottom">
+                            <Tippy delay={[0, 100]} content="Tin nhắn" placement="bottom" theme="header-popup">
                                 <Button className={cx('icon-btn')} to={config.routes.messages}>
                                     <MessageIcon />
                                 </Button>
                             </Tippy>
                             {/* Popup Inbox */}
-                            <Tippy delay={[0, 100]} content="Hộp thư" placement="bottom">
+                            <Tippy delay={[0, 100]} content="Hộp thư" placement="bottom" theme="header-popup">
                                 <Button className={cx('icon-btn')}>
                                     <InboxIcon />
                                     <div className={cx('badge')}>76</div>

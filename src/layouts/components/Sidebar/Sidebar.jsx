@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 
+import styles from './Sidebar.module.scss';
 import * as userService from '~/services/userService';
 import * as followService from '~/services/followService';
-import AccountsTab from './AccountsTab';
 import Menu from './Menu';
-import styles from './Sidebar.module.scss';
+import AccountsTab from './AccountsTab';
+import Discover from './Discover';
+import Footer from './Footer';
 
 const cx = classNames.bind(styles);
 const INIT_PAGE = 1;
@@ -43,6 +45,8 @@ function Sidebar() {
             <Menu />
             <AccountsTab label="Tài khoản được đề xuất" data={suggestedUsers} />
             <AccountsTab label="Các tài khoản đang follow" data={followingUsers} onSeeMore={handleSeeMore} />
+            <Discover />
+            <Footer />
         </aside>
     );
 }

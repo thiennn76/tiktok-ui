@@ -3,6 +3,10 @@
     width: 361px;
 }
 
+.search-popper {
+    max-height: min((100vh - 96px) - 60px, 734px);
+}
+
 .search {
     height: 46px;
     display: flex;

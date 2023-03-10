@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleCheck, faComment, faHeart, faMusic, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faCircleCheck, faComment, faHeart, faShare } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './VideoItem.module.scss';
 import Image from '~/components/Image';
@@ -16,6 +16,7 @@ import {
     FacebookIcon,
     LineIcon,
     LinkedInIcon,
+    MusicNoteIcon,
     PineterestIcon,
     RedditIcon,
     ShareMessageIcon,
@@ -115,7 +116,7 @@ function VideoItem({ data }) {
                     <p className={cx('description')}>{data.description}</p>
 
                     <p className={cx('music')}>
-                        <FontAwesomeIcon className={cx('music-note')} icon={faMusic} />
+                        <MusicNoteIcon className={cx('music-note')} />
                         {data.music}
                     </p>
                     <div className={cx('video-wrapper')}>
@@ -139,7 +140,7 @@ function VideoItem({ data }) {
 
                             <Menu
                                 items={shareMenu}
-                                delay={[0, 300]}
+                                delay={[0, 400]}
                                 offset={[-25, 0]}
                                 placement="top-start"
                                 className={cx('share-menu')}

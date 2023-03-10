@@ -80,6 +80,8 @@
 }
 
 .music {
+    display: flex;
+    align-items: center;
     font-size: 16px;
     line-height: 25px;
     font-weight: 600;
@@ -88,8 +90,6 @@
 }
 
 .music-note {
-    height: 12px;
-    width: 12px;
     margin-right: 5px;
 }
 
