@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -26,6 +27,7 @@ import {
     UserIcon,
 } from '~/components/Icon';
 import Search from '../Search';
+import Login from '~/components/Login';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -64,7 +66,8 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
+    const [login, setLogin] = useState(false);
 
     const userMenu = [
         {
@@ -139,9 +142,10 @@ function Header() {
                             <Button upload leftIcon={<FontAwesomeIcon icon={faPlus} />} to={config.routes.upload}>
                                 Tải lên
                             </Button>
-                            <Button primary medium>
+                            <Button primary medium onClick={() => setLogin(true)}>
                                 Đăng nhập
                             </Button>
+                            {login && <Login login={login} onClose={() => setLogin(false)} />}
                         </>
                     )}
                     <Menu

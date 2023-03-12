@@ -30,7 +30,7 @@ function ScrollToTopButton() {
         return () => {
             scrollContent.removeEventListener('scroll', toggleVisible);
         };
-    });
+    }, []);
 
     return (
         <div className={cx('wrapper')}>
